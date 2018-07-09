@@ -18,7 +18,7 @@ applied_coupons ={}
 if !coupons.empty?
 coupons.each do |coupon|
   cart.each do |in_cart,values|
-    if coupon[:item] == in_cart && coupon[:num] < values[:count]
+    if coupon[:item] == in_cart && coupon[:num] <= values[:count]
     applied_coupons[in_cart] ||= values
     values[:count] = values[:count] - coupon[:num]
 
