@@ -59,7 +59,7 @@ cart.each do |item,values|
 total += values[:price]*values[:count]
 end
 if total > 100
-  total = total*.9
+  total = total*0.9
 end
 return total
 end
